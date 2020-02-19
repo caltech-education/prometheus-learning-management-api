@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: prometheus
+  profiles:
+    active: dev
+athena:
+  default:
+    url: localhost:8081/v1/dev

@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /v1
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
