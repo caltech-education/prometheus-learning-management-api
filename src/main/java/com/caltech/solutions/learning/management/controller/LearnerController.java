@@ -1,7 +1,7 @@
 package com.caltech.solutions.learning.management.controller;
 
-import com.caltech.solutions.learning.management.dto.staffTO.StaffTypeTO;
-import com.caltech.solutions.learning.management.service.StaffTypeService;
+import com.caltech.solutions.learning.management.dto.learnerTO.LearnerTO;
+import com.caltech.solutions.learning.management.service.LearnerService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,14 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/staff-types")
-@Api(value="Staff Type Controller", tags="Staff Type Controller")
-public class StaffTypeController {
+@RequestMapping("/learners")
+@Api(value="Learner Controller", tags="Learner Controller")
+public class LearnerController {
 
-    private final StaffTypeService service;
+    private final LearnerService service;
 
     @Autowired
-    StaffTypeController(StaffTypeService service) {
+    LearnerController(LearnerService service) {
         this.service = service;
     }
 
@@ -31,13 +31,13 @@ public class StaffTypeController {
     }
 
     @PostMapping
-    public ResponseEntity save(@RequestBody StaffTypeTO staffTypeTO) {
-        return ResponseEntity.ok(service.save(staffTypeTO));
+    public ResponseEntity save(@RequestBody LearnerTO learnerTO) {
+        return ResponseEntity.ok(service.save(learnerTO));
     }
 
     @PutMapping
-    public ResponseEntity update(@RequestBody StaffTypeTO staffTypeTO) {
-        return new ResponseEntity<>(service.update(staffTypeTO), HttpStatus.NO_CONTENT);
+    public ResponseEntity update(@RequestBody LearnerTO learnerTO) {
+        return new ResponseEntity<>(service.update(learnerTO), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{id}")

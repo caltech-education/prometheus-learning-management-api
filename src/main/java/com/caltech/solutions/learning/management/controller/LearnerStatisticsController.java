@@ -1,7 +1,7 @@
 package com.caltech.solutions.learning.management.controller;
 
-import com.caltech.solutions.learning.management.dto.staffTO.StaffTypeTO;
-import com.caltech.solutions.learning.management.service.StaffTypeService;
+import com.caltech.solutions.learning.management.dto.learnerTO.LearnerStatisticsTO;
+import com.caltech.solutions.learning.management.service.LearnerStatisticsService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,14 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/staff-types")
-@Api(value="Staff Type Controller", tags="Staff Type Controller")
-public class StaffTypeController {
+@RequestMapping("/learner-statistics")
+@Api(value="Learner Statistics Controller", tags="Learner Statistics Controller")
+public class LearnerStatisticsController {
 
-    private final StaffTypeService service;
+    private final LearnerStatisticsService service;
 
     @Autowired
-    StaffTypeController(StaffTypeService service) {
+    LearnerStatisticsController(LearnerStatisticsService service) {
         this.service = service;
     }
 
@@ -31,13 +31,13 @@ public class StaffTypeController {
     }
 
     @PostMapping
-    public ResponseEntity save(@RequestBody StaffTypeTO staffTypeTO) {
-        return ResponseEntity.ok(service.save(staffTypeTO));
+    public ResponseEntity save(@RequestBody LearnerStatisticsTO learnerStatisticsTO) {
+        return ResponseEntity.ok(service.save(learnerStatisticsTO));
     }
 
     @PutMapping
-    public ResponseEntity update(@RequestBody StaffTypeTO staffTypeTO) {
-        return new ResponseEntity<>(service.update(staffTypeTO), HttpStatus.NO_CONTENT);
+    public ResponseEntity update(@RequestBody LearnerStatisticsTO learnerStatisticsTO) {
+        return new ResponseEntity<>(service.update(learnerStatisticsTO), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{id}")

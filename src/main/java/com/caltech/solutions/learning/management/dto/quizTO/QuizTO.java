@@ -11,7 +11,7 @@ import java.util.Set;
  * Created on 18/02/2020
  */
 @ApiModel(value = "Quiz")
-public class QuizDTO {
+public class QuizTO {
 
     private String userId;
 
@@ -29,13 +29,13 @@ public class QuizDTO {
 
     private Date expiration;
 
-    public QuizDTO() {}
+    public QuizTO() {}
 
     public String getUserId() {
         return userId;
     }
 
-    public QuizDTO setUserId(String userId) {
+    public QuizTO setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -44,7 +44,7 @@ public class QuizDTO {
         return subjectId;
     }
 
-    public QuizDTO setSubjectId(String subjectId) {
+    public QuizTO setSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }
@@ -53,7 +53,7 @@ public class QuizDTO {
         return description;
     }
 
-    public QuizDTO setDescription(String description) {
+    public QuizTO setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -62,7 +62,7 @@ public class QuizDTO {
         return learnRecommendation;
     }
 
-    public QuizDTO setLearnRecommendation(String learnRecommendation) {
+    public QuizTO setLearnRecommendation(String learnRecommendation) {
         this.learnRecommendation = learnRecommendation;
         return this;
     }
@@ -71,7 +71,7 @@ public class QuizDTO {
         return answerOptions;
     }
 
-    public QuizDTO setAnswerOptions(Set<AnswerOptions> answerOptions) {
+    public QuizTO setAnswerOptions(Set<AnswerOptions> answerOptions) {
         this.answerOptions = answerOptions;
         return this;
     }
@@ -80,7 +80,7 @@ public class QuizDTO {
         return maxRetries;
     }
 
-    public QuizDTO setMaxRetries(Integer maxRetries) {
+    public QuizTO setMaxRetries(Integer maxRetries) {
         this.maxRetries = maxRetries;
         return this;
     }
@@ -89,7 +89,7 @@ public class QuizDTO {
         return tip;
     }
 
-    public QuizDTO setTip(String tip) {
+    public QuizTO setTip(String tip) {
         this.tip = tip;
         return this;
     }
@@ -98,7 +98,7 @@ public class QuizDTO {
         return expiration;
     }
 
-    public QuizDTO setExpiration(Date expiration) {
+    public QuizTO setExpiration(Date expiration) {
         this.expiration = expiration;
         return this;
     }

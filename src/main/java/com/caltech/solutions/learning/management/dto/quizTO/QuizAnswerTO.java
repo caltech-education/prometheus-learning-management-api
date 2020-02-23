@@ -11,7 +11,7 @@ import java.util.Set;
  * Created on 18/02/2020
  */
 @ApiModel(value = "Quiz Answer")
-public class QuizAnswerDTO {
+public class QuizAnswerTO {
 
     private String userId;
 
@@ -22,13 +22,13 @@ public class QuizAnswerDTO {
 
     private Integer numberOfRetries;
 
-    public QuizAnswerDTO() {}
+    public QuizAnswerTO() {}
 
     public String getUserId() {
         return userId;
     }
 
-    public QuizAnswerDTO setUserId(String userId) {
+    public QuizAnswerTO setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -37,7 +37,7 @@ public class QuizAnswerDTO {
         return quizId;
     }
 
-    public QuizAnswerDTO setQuizId(String quizId) {
+    public QuizAnswerTO setQuizId(String quizId) {
         this.quizId = quizId;
         return this;
     }
@@ -46,7 +46,7 @@ public class QuizAnswerDTO {
         return answerOptions;
     }
 
-    public QuizAnswerDTO setAnswerOptions(Set<AnswerOptions> answerOptions) {
+    public QuizAnswerTO setAnswerOptions(Set<AnswerOptions> answerOptions) {
         this.answerOptions = answerOptions;
         return this;
     }
@@ -55,7 +55,7 @@ public class QuizAnswerDTO {
         return numberOfRetries;
     }
 
-    public QuizAnswerDTO setNumberOfRetries(Integer numberOfRetries) {
+    public QuizAnswerTO setNumberOfRetries(Integer numberOfRetries) {
         this.numberOfRetries = numberOfRetries;
         return this;
     }

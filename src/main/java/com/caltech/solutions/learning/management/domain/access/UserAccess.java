@@ -2,6 +2,7 @@ package com.caltech.solutions.learning.management.domain.access;
 
 import com.caltech.solutions.learning.management.enumeration.PrivilegeType;
 
+import java.io.Serializable;
 import java.util.Set;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Set;
  * Created on 18/02/2020
  */
 
-public class UserAccess {
+public class UserAccess implements Serializable {
 
     private Short level;
 
